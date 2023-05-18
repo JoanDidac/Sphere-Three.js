@@ -35,10 +35,12 @@ scene.add(camera)
 
 
 
-//Rendered
+//Renderer
 const canvas = document.querySelector('.webgl');
 const renderer = new THREE.WebGLRenderer({ canvas })
 renderer.setSize(sizes.width , sizes.height )
+// renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2)) 
+renderer.setPixelRatio(2)
 renderer.render(scene,camera)
 
 
@@ -61,6 +63,8 @@ window.addEventListener('resize' , () => {
     camera.aspect = sizes.width / sizes.height
     camera.updateProjectionMatrix()
     renderer.setSize( sizes.width, sizes.height)
+    // renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2))
+    renderer.setPixelRatio(2)
 })
 
 const loop = () => {
