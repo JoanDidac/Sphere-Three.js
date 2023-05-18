@@ -1,0 +1,19 @@
+{
+    "name": "Sphere-Three.js",
+    "version": "1.0.0",
+    "description": "A Three.js project",
+    "main": "index.js",
+    "scripts": {
+      "dev": "vite",
+      "build": "vite build",
+      "serve": "vite preview"
+    },
+    "dependencies": {
+      "gsap": "^3.9.1",
+      "three": "^0.130.1"
+    },
+    "devDependencies": {
+      "vite": "^2.6.14"
+    }
+  }
+  
