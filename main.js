@@ -47,6 +47,8 @@ const controls = new OrbitControls(camera,canvas)
 controls.enableDamping = true
 controls.enablePan = false
 controls.enableZoom = false
+controls.autoRotate = true
+controls.autoRotateSpeed = 5
 
 
 
@@ -62,7 +64,7 @@ window.addEventListener('resize' , () => {
 })
 
 const loop = () => {
-    controls.update
+    controls.update()
     renderer.render(scene,camera)
     window.requestAnimationFrame(loop)
 }
