@@ -25,10 +25,15 @@ scene.add(light)
 
 
 //Sizes
-const sizes = {
-    height:window.innerHeight,
-    width:window.innerWidth,
+// const sizes = {
+//     height:window.innerHeight,
+//     width:window.innerWidth,
 
+// }
+const sphereSection = document.getElementById('sphere-section');
+const sizes = {
+    width: sphereSection.offsetWidth,
+    height: sphereSection.offsetHeight,
 }
 
 //Add camera
@@ -58,10 +63,21 @@ controls.autoRotateSpeed = 5
 
 
 //Resizing
+// window.addEventListener('resize' , () => {
+//     //Update Size
+//     sizes.width = window.innerWidth
+//     sizes.height = window.innerHeight
+//     //Update Camera
+//     camera.aspect = sizes.width / sizes.height
+//     camera.updateProjectionMatrix()
+//     renderer.setSize( sizes.width, sizes.height)
+//     // renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2))
+//     renderer.setPixelRatio(2)
+// })
 window.addEventListener('resize' , () => {
     //Update Size
-    sizes.width = window.innerWidth
-    sizes.height = window.innerHeight
+    sizes.width = sphereSection.offsetWidth
+    sizes.height = sphereSection.offsetHeight
     //Update Camera
     camera.aspect = sizes.width / sizes.height
     camera.updateProjectionMatrix()
