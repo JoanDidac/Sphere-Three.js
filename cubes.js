@@ -66,7 +66,7 @@ function onMouseMoveCubes(event) {
         let tl = gsap.timeline();
         tl.to(intersects[i].object.scale, {duration: 1, x: 2, ease: "expo.out"});
         // tl.to(intersects[i].object.scale, {duration: .5, x: 3, ease: "expo.out"});
-        tl.to(intersects[i].object.position, {duration: .5, x: 2, ease: "expo.out"});
+        tl.to(intersects[i].object.position, {duration: 2, x: 2.8, ease: "expo.out"});
         tl.to(intersects[i].object.rotation, {duration: 5, y: Math.PI*.5, ease: "expo.out"});
     }
 }
