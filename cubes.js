@@ -15,7 +15,7 @@ let canvasCubeDiv = document.querySelector('.webgl-Cubes');
 let cubeDiv = document.querySelector('#canvas-cube');
 
 let rendererCubes = new THREE.WebGLRenderer({ canvas: canvasCubeDiv, antialias: true });
-rendererCubes.setClearColor("#e5e5e5");
+rendererCubes.setClearColor("#F2F0EB");
 rendererCubes.setSize(cubeSection.offsetWidth, cubeSection.offsetHeight);
 
 window.addEventListener('resize', () => {
@@ -31,12 +31,12 @@ let raycaster = new THREE.Raycaster();
 let mouseCubes = new THREE.Vector2();
 
 let geometryCubes = new THREE.BoxGeometry(1, 1, 1);
-let materialCubes = new THREE.MeshLambertMaterial({ color: 0xF7F7F7 });
+let materialCubes = new THREE.MeshLambertMaterial({ color: 0xe0fed7 });
 let meshCubes = new THREE.Mesh(geometryCubes, materialCubes);
 
 sceneCubes.add(meshCubes);
 
-for(let i = 0; i<15;i++) {
+for(let i = 0; i<115;i++) {
     let mesh = new THREE.Mesh(geometryCubes, materialCubes);
     mesh.position.x = (Math.random() - 0.5) * 10;
     mesh.position.y = (Math.random() - 0.5) * 10;
@@ -44,8 +44,8 @@ for(let i = 0; i<15;i++) {
     sceneCubes.add(mesh);
 }
 
-let lightCubes = new THREE.PointLight(0xFFFFFF, 2, 1000);
-lightCubes.position.set(0,0,25);
+let lightCubes = new THREE.PointLight(0xf4fed7, 1.3, 1000);
+lightCubes.position.set(0,1,5);
 sceneCubes.add(lightCubes);
 
 let renderCubes = function() {
@@ -65,9 +65,9 @@ function onMouseMoveCubes(event) {
     for (let i = 0; i < intersects.length; i++) {
         let tl = gsap.timeline();
         tl.to(intersects[i].object.scale, {duration: 1, x: 2, ease: "expo.out"});
-        tl.to(intersects[i].object.scale, {duration: .5, x: .5, ease: "expo.out"});
+        // tl.to(intersects[i].object.scale, {duration: .5, x: 3, ease: "expo.out"});
         tl.to(intersects[i].object.position, {duration: .5, x: 2, ease: "expo.out"});
-        tl.to(intersects[i].object.rotation, {duration: .5, y: Math.PI*.5, ease: "expo.out"});
+        tl.to(intersects[i].object.rotation, {duration: 5, y: Math.PI*.5, ease: "expo.out"});
     }
 }
 
