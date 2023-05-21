@@ -15,7 +15,7 @@ html {
 
 #sphere-section {
     position: relative;
-    height: 100%;  /* Adjust this based on your requirement */
+    height: 100vh;  /* Adjust this based on your requirement */
     width: 100%;
     /* overflow: hidden; */
 
@@ -32,9 +32,10 @@ html {
 }
 
 nav {
+    width: 100%;
     color: white;
     z-index: 2;
-    position: relative;
+    position: absolute;
     padding: 4rem 8rem;
     display: flex;
     justify-content: space-between;
