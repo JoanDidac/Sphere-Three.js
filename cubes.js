@@ -8,7 +8,7 @@ let sceneCubes = new THREE.Scene();
 let cubeSection = document.querySelector('#cube-section');
 
 let cameraCubes = new THREE.PerspectiveCamera(75, cubeSection.offsetWidth / cubeSection.offsetHeight, 0.1, 1000);
-cameraCubes.position.z = 5;
+cameraCubes.position.z = 6.6;
 
 let canvasCubeDiv = document.querySelector('.webgl-Cubes');
 // canvasCubeDiv.appendChild(rendererCubes.domElement);

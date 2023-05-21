@@ -35,18 +35,36 @@ body {
 }
 .cubes-title {
     position: absolute;
-    top: 2em;
-    left: 2em;
-    font-family: 'Montserrat';
-    font-size: 7em;
-    text-transform: uppercase;
-    width: auto;
+    top: 2.5em;
+    left: 3em;
+    font-family: 'Poppins';
+    font-size: 8em;
+    text-transform:uppercase;
+    width: calc(44.5%);
+    font-weight: 200;
+    background-image: radial-gradient( transparent, rgba(255, 255, 255, 0.476)) ;
     line-height: .8em;
-    border: 5px solid black;
-    padding: .2em;
+    letter-spacing: 45px;
+    border: 5px solid slategrey;
+    padding: .3em;
+    color: rgb(48, 70, 92);
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.167);
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.401);
 }
 
-
+#cube-section h3{
+    width: 15em;
+ position: absolute;
+ color: rgba(0, 0, 0, 0.534);
+ font-family: "Poppins";
+ font-size: 3em;
+ letter-spacing: 6px;
+ font-weight: 100;
+ padding: .3em;
+ margin-left: 50px;
+ z-index: 1000;
+ margin-top: 400px;
+}
 
 /* cubes */
 
